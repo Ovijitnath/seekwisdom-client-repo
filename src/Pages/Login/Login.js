@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 const Login = () => {
 
-    const { providerLogin } = useContext(AuthContext)
+    const { providerLogin, signIn } = useContext(AuthContext)
 
     const googleProvider = new GoogleAuthProvider()
     const handleGoogleSignIn = () => {
@@ -21,21 +21,35 @@ const Login = () => {
             })
             .catch(error => console.error(error))
     }
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password)
+
+        signIn(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                form.reset();
+            })
+            .catch(e => console.error(e));
+
+    }
 
     return (
         <div className='w-50 mx-auto pt-5'>
-            <Form>
+            <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" required />
-                    <Form.Text className="text-muted">
-                        We'll never share your email with anyone else.
-                    </Form.Text>
+                    <Form.Control name="email" type="email" placeholder="Enter email" required />
+
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" required />
+                    <Form.Control name="password" type="password" placeholder="Password" required />
                 </Form.Group>
                 <ButtonGroup vertical>
 
