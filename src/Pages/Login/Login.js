@@ -6,6 +6,7 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { AuthContext } from '../../Contexts/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
 
@@ -48,9 +49,17 @@ const Login = () => {
                 <Button variant="primary" type="submit">
                     Submit
                 </Button>
+                <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                    <Form.Text className="text-muted">
+                        We'll never share your email with anyone else.
+                    </Form.Text>
+                </Form.Group>
+                <p>New in this site  <Link to='/register' style={{ textDecoration: 'none' }} >Register Here</Link></p>
+
+
 
             </Form>
-        </div>
+        </div >
     );
 };
 
