@@ -7,6 +7,7 @@ import Faq from "../Pages/FAQ/Faq";
 import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
+import ErrorPage from "../Pages/Shared/ErrorPage/ErrorPage";
 
 export const routes = createBrowserRouter([
     {
@@ -47,5 +48,9 @@ export const routes = createBrowserRouter([
             }
 
         ]
+    },
+    {
+        path: '*',
+        element: <ErrorPage></ErrorPage>
     }
 ])
