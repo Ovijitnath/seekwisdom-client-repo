@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Courses = () => {
+    const [categories, setCategories] = useState([]);
     return (
         <div>
-            <h1>Courses</h1>
+            <h1>Total Courses: </h1>
         </div>
     );
 };
