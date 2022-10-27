@@ -5,14 +5,14 @@ const Faq = () => {
     return (
         <div className='pt-5'>
 
-            <section className="pt-24 pb-36 bg-white overflow-hidden">
+            {/* <section className="pt-24 pb-36 bg-white overflow-hidden">
                 <div className="container">
                     <h2 className="fs-10 fw-semibold text-center mb-14">Frequently asked question</h2>
                     <div className="mw-md-2xl mx-auto" >
                         <div className="bg-white">
                             <div className="row">
                                 <div className="col-12">
-                                    <Link className="block" href="#">
+                                    <Link className="block" to="#">
                                         <div className="py-4 px-5">
                                             <div className="row align-items-center justify-content-between">
                                                 <div className="col-auto">
@@ -29,7 +29,7 @@ const Faq = () => {
                                     </Link>
                                 </div>
                                 <div className="col-12">
-                                    <Link href="#">
+                                    <Link to="#">
                                         <div className="py-4 px-5">
                                             <div className="row align-items-center justify-content-between">
                                                 <div className="col-auto">
@@ -49,7 +49,7 @@ const Faq = () => {
                                     </Link>
                                 </div>
                                 <div className="col-12">
-                                    <Link href="#">
+                                    <Link to="#">
                                         <div className="py-4 px-5">
                                             <div className="row align-items-center justify-content-between">
                                                 <div className="col-auto">
@@ -66,7 +66,7 @@ const Faq = () => {
                                     </Link>
                                 </div>
                                 <div className="col-12">
-                                    <Link href="#">
+                                    <Link to="#">
                                         <div className="py-4 px-5">
                                             <div className="row align-items-center justify-content-between">
                                                 <div className="col-auto">
@@ -83,7 +83,7 @@ const Faq = () => {
                                     </Link>
                                 </div>
                                 <div className="col-12">
-                                    <Link href="#">
+                                    <Link to="#">
                                         <div className="py-4 px-5">
                                             <div className="row align-items-center justify-content-between">
                                                 <div className="col-auto">
@@ -102,7 +102,7 @@ const Faq = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </div>
     );
 };

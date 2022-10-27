@@ -2,25 +2,25 @@ import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 
 import Image from 'react-bootstrap/Image'
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-import { Card, CardGroup, Nav } from 'react-bootstrap';
+
+import { Card, Nav } from 'react-bootstrap';
 
 // import ReactDOM from "react-dom";
-// import Pdf from "react-to-pdf";
+import Pdf from "react-to-pdf";
 
 
 const ref = React.createRef();
 
 const Category = () => {
 
-    const course = useLoaderData();
+    const courses = useLoaderData();
+
     return (
         <div className='mx-5 my-5 p-5' ref={ref}>
 
             {
                 <div>
-                    {course.map(course => <div>
+                    {courses.map(course => <div>
                         <Card className="text-center" >
                             <Card.Header>Course Name:{course.title}</Card.Header>
                             <Card.Body>
@@ -46,15 +46,15 @@ const Category = () => {
 
             }
 
-            {/* <div className="App">
+            <div className="App">
                 <Pdf targetRef={ref} filename="code-example.pdf">
-                    {({ toPdf }) => <button onClick={toPdf}>Generate Pdf</button>}
+                    {({ toPdf }) => <button variant="danger" onClick={toPdf}>Download Pdf</button>}
                 </Pdf>
                 <div >
 
 
                 </div>
-            </div> */}
+            </div>
 
         </div>
     );

@@ -29,7 +29,7 @@ const Header = () => {
         <div>
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                 <Container>
-                    <Image style={{ height: '30px' }} src='https://ibb.co/cy4hvDW'></Image>
+
                     <Navbar.Brand href="/">    seekWisdom</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
