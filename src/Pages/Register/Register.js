@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useContext } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider';
 
 const Register = () => {
-
+    const [error, setError] = useState('');
     const { createUser } = useContext(AuthContext)
 
     const handleSubmit = event => {
@@ -22,8 +22,11 @@ const Register = () => {
                 const user = result.user;
                 console.log(user);
                 form.reset();
+                setError('')
+
             })
             .catch(e => console.error(e));
+        setError(error.message);
 
     }
 
@@ -56,10 +59,10 @@ const Register = () => {
                 </Button>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Text className="text-muted">
-                        We'll never share your email with anyone else.
+                        {error}
                     </Form.Text>
                 </Form.Group>
-                <p>Already Have an account?  <Link to='/login'  >Login Here</Link></p>
+                <p>Already Have An Account?  <Link to='/login'  >Login Here</Link></p>
 
 
 

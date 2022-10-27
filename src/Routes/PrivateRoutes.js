@@ -7,12 +7,14 @@ import { AuthContext } from '../Contexts/AuthProvider';
 
 const PrivateRoute = ({ children }) => {
 
-    const { user, loading } = useContext(AuthContext);
+    const { user, loading } = useContext
+        (AuthContext);
     const location = useLocation();
 
     if (loading) {
 
-        return <Spinner animation='border' variant='primary'></Spinner>
+        return <Spinner
+            animation='border' variant='primary'></Spinner>
     }
 
     if (!user) {

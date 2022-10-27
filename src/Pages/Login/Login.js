@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
@@ -6,9 +6,15 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { AuthContext } from '../../Contexts/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
+
+    const [error, setError] = useState('');
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/';
 
     const { providerLogin, signIn } = useContext(AuthContext)
 
@@ -33,8 +39,11 @@ const Login = () => {
                 const user = result.user;
                 console.log(user);
                 form.reset();
+                setError('')
+                navigate(from, { replace: true });
             })
             .catch(e => console.error(e));
+        setError(error.message);
 
     }
 
@@ -65,10 +74,10 @@ const Login = () => {
                 </Button>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Text className="text-muted">
-                        We'll never share your email with anyone else.
+                        {error}
                     </Form.Text>
                 </Form.Group>
-                <p>New in this site?  <Link to='/register'  >Register Here</Link></p>
+                <p>New to this site?  <Link to='/register'  >Register Here</Link></p>
 
 
 

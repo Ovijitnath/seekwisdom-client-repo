@@ -22,7 +22,7 @@ const Category = () => {
                 <div>
                     {courses.map(course => <div>
                         <Card className="text-center" >
-                            <Card.Header>Course Name:{course.title}</Card.Header>
+                            <Card.Header> <h2 className='text-danger'>Course Name:  {course.title}</h2></Card.Header>
                             <Card.Body>
                                 <Card.Title></Card.Title>
 
@@ -31,30 +31,37 @@ const Category = () => {
                                         fluid
                                         className='me-2'
                                         src={course.image_url}
-                                        style={{ height: '250px' }}
+                                        style={{ height: '200px' }}
                                     ></Image>
                                 </div>
                             </Card.Body>
-                            <Card.Footer className="text-muted">Good to go</Card.Footer>
+                            <Card.Footer className="text-muted"><p className='fs-6'>{course.details} </p></Card.Footer>
+                            <Card.Footer className="text-muted">
+                                <h5>Rating: {course.rating.number} </h5>
+                                <h5>Course Cost: {course.price}</h5>
+                                <h5> Course Duration: {course.duration}</h5>
+                                <div className="App">
+                                    <Pdf targetRef={ref} filename="code-example.pdf">
+                                        {({ toPdf }) => <button variant="primary" onClick={toPdf}>Download Pdf</button>}
+                                    </Pdf>
+
+                                </div>
+
+                            </Card.Footer>
 
                         </Card>
 
 
-                        <Nav.Link> <Link to='/premium' style={{ textDecoration: 'none' }} >Premium</Link></Nav.Link>
+                        <div className='mt-1 d-flex justify-content-center '>
+                            <Nav.Link> <Link class="btn btn-success text-white my-2  " to='/checkout' style={{ textDecoration: 'none' }} >Get premium access</Link></Nav.Link>
+                        </div>
+
                     </div>)}
                 </div>
 
             }
 
-            <div className="App">
-                <Pdf targetRef={ref} filename="code-example.pdf">
-                    {({ toPdf }) => <button variant="danger" onClick={toPdf}>Download Pdf</button>}
-                </Pdf>
-                <div >
 
-
-                </div>
-            </div>
 
         </div>
     );

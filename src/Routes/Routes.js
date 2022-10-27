@@ -10,6 +10,10 @@ import Register from "../Pages/Register/Register";
 import ErrorPage from "../Pages/Shared/ErrorPage/ErrorPage";
 import Category from "../Pages/Category/Category";
 
+import Checkout from "../Pages/Checkout/Checkout";
+import PrivateRoute from "./PrivateRoutes";
+
+
 export const routes = createBrowserRouter([
     {
         path: '/',
@@ -53,6 +57,13 @@ export const routes = createBrowserRouter([
                 path: '/course/:id',
                 element: <Category></Category>,
                 loader: ({ params }) => fetch(`http://localhost:5000/course/${params.id}`)
+
+
+            },
+            {
+
+                path: '/checkout',
+                element: <PrivateRoute> <Checkout></Checkout> </PrivateRoute>
 
 
             }

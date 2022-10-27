@@ -30,7 +30,7 @@ const Courses = () => {
                             {
                                 categories.map(category => <div key={category.id} className='mt-1' >
                                     <button type="button" class="btn btn-outline-warning">
-                                        <Link style={{ textDecoration: 'none' }} to={`/course/${category.id}`} > {category.name} </Link>Language</button>
+                                        <Link style={{ textDecoration: 'none' }} to={`/courses/${category.id}`} > {category.name} </Link>Language</button>
                                 </div>)
 
                             }
