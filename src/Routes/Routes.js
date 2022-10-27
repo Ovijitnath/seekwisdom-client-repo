@@ -8,6 +8,7 @@ import Home from "../Pages/Home/Home";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import ErrorPage from "../Pages/Shared/ErrorPage/ErrorPage";
+import Category from "../Pages/Category/Category";
 
 export const routes = createBrowserRouter([
     {
@@ -32,7 +33,8 @@ export const routes = createBrowserRouter([
             },
             {
                 path: '/courses',
-                element: <Courses></Courses>
+                element: <Courses></Courses>,
+                
             },
             {
                 path: '/faq',
@@ -45,6 +47,14 @@ export const routes = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
+            },
+            {
+
+                path: '/category/:id',
+                element: <Category></Category>,
+                loader: ({ params }) => fetch(`http://localhost:5000/category/${params.id}`)
+
+
             }
 
         ]
