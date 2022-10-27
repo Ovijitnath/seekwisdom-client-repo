@@ -18,15 +18,7 @@ const Login = () => {
 
     const { providerLogin, signIn } = useContext(AuthContext)
 
-    const googleProvider = new GoogleAuthProvider()
-    const handleGoogleSignIn = () => {
-        providerLogin(googleProvider)
-            .then(result => {
-                const user = result.user;
-                console.log(user);
-            })
-            .catch(error => console.error(error))
-    }
+
     const handleSubmit = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -45,6 +37,15 @@ const Login = () => {
             .catch(e => console.error(e));
         setError(error.message);
 
+    }
+    const googleProvider = new GoogleAuthProvider();
+    const handleGoogleSignIn = () => {
+        providerLogin(googleProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(error => console.error(error))
     }
 
     return (

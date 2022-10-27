@@ -9,15 +9,15 @@ const Checkout = () => {
                     <Col lg="6">
 
                         <div className='mt-5'>
-                            <img src="https://sithcomputers.com/wp-content/uploads/2021/05/Scratch.gif" alt="" ></img>
+                            <h1>Congratulations! <br /> You are a <span className='text-primary'>Premium member</span>  now !!</h1>
+                            <h4 className='mt-5'> <span className='text-danger'>seekWisdom</span> Premium Membership is completed for you. </h4>
+
                         </div>
 
                     </Col>
                     <Col lg="6">
                         <div className='mt-5'>
-                            <h1>Congratulations! <br /> You are a <span className='text-primary'>Premium member</span>  now !!</h1>
-                            <h4 className='mt-5'> <span className='text-danger'>seekWisdom</span> Premium Membership is completed for you. </h4>
-
+                            <img src="https://sithcomputers.com/wp-content/uploads/2021/05/Scratch.gif" alt="" ></img>
                         </div>
                     </Col>
 
