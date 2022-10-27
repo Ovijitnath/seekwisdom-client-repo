@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ErrorPage = () => {
     return (
@@ -9,7 +10,7 @@ const ErrorPage = () => {
                 <p className="lead">
                     The page you’re looking for doesn’t exist.
                 </p>
-                <a href="/home" className="btn btn-primary">Go Home</a>
+                <Link to="/home" className="btn btn-primary">Go Home</Link>
             </div>
         </div>
     );

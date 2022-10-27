@@ -29,8 +29,8 @@ const Header = () => {
         <div>
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                 <Container>
-
-                    <Navbar.Brand href="/"> seekWisdom</Navbar.Brand>
+                    <Image style={{ height: '30px' }} src='https://ibb.co/cy4hvDW'></Image>
+                    <Navbar.Brand href="/">    seekWisdom</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
@@ -38,10 +38,6 @@ const Header = () => {
 
                         </Nav>
                         <Nav>
-
-
-
-
                             <Nav.Link><Link to='/home' style={{ textDecoration: 'none' }} >Home</Link></Nav.Link>
                             <Nav.Link> <Link to='/courses' style={{ textDecoration: 'none' }} >Courses</Link></Nav.Link>
                             <Nav.Link><Link to='/faq' style={{ textDecoration: 'none' }} >FAQ</Link></Nav.Link>
@@ -52,15 +48,12 @@ const Header = () => {
                                 {
                                     user?.uid ?
                                         <>
-
-
                                             <Nav.Link onClick={handleLogOut}> <Link style={{ textDecoration: 'none' }} >Log Out</Link></Nav.Link>
 
                                         </>
-
                                         :
                                         <>
-                                            <Link to='/login'> Login </Link>
+                                            <Link style={{ textDecoration: 'none' }} to='/login'> Login </Link>
 
                                         </>
                                 }
