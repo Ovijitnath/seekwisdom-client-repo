@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { AuthContext } from '../../Contexts/AuthProvider';
-import { GoogleAuthProvider } from 'firebase/auth';
+import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
@@ -43,8 +43,18 @@ const Login = () => {
 
     }
     const googleProvider = new GoogleAuthProvider();
+
     const handleGoogleSignIn = () => {
         providerLogin(googleProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .catch(error => console.error(error))
+    }
+    const githubProvider = new GithubAuthProvider();
+    const handleGithubSignIn = () => {
+        providerLogin(githubProvider)
             .then(result => {
                 const user = result.user;
                 console.log(user);
@@ -68,7 +78,7 @@ const Login = () => {
                 <ButtonGroup vertical>
 
                     <Button onClick={handleGoogleSignIn} className='mb-2' variant="outline-success"> <FaGoogle></FaGoogle>  Login with Google</Button>
-                    <Button variant="outline-secondary"><FaGithub></FaGithub> Login with Github</Button>
+                    <Button onClick={handleGithubSignIn} variant="outline-secondary"><FaGithub></FaGithub> Login with Github</Button>
 
                 </ButtonGroup>
                 <Form.Group className="mb-3 pt-4" controlId="formBasicCheckbox">
