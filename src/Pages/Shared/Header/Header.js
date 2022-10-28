@@ -8,9 +8,7 @@ import { Link } from 'react-router-dom';
 import ReactTooltip from 'react-tooltip';
 import { FaSearchengin } from "react-icons/fa";
 import { AuthContext } from '../../../Contexts/AuthProvider';
-
-
-
+import DarkMode from '../../../DarkMode/DarkMode';
 
 
 
@@ -34,7 +32,6 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-
 
                         </Nav>
 
@@ -71,7 +68,9 @@ const Header = () => {
 
                         </Nav>
                     </Navbar.Collapse>
+
                 </Container>
+                <DarkMode></DarkMode>
             </Navbar>
         </div>
     );
