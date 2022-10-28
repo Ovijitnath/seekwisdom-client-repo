@@ -1,19 +1,20 @@
 import React from 'react';
-import { Image } from 'react-bootstrap';
+import { Button, Card, Image } from 'react-bootstrap';
 import Carousel from 'react-bootstrap/Carousel';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     return (
         <div className='mt-2'>
-            <Carousel variant="dark">
+            <Carousel variant="light" >
                 <Carousel.Item>
                     <img className="d-block w-100"
                         src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZ3JhbW1pbmd8ZW58MHx8MHx8&w=1000&q=80"
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h5>First slide label</h5>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <h3 className='fs-2'>seekWisdom?</h3>
+                        <p>If any of you lacks wisdom, let him ask God, who gives generously to all without reproach, and it will be given him.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -23,20 +24,20 @@ const Home = () => {
                         alt="Second slide"
                     />
                     <Carousel.Caption>
-                        <h5>Second slide label</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h3 className='fs-2'>seekWisdom?</h3>
+                        <p>But the wisdom from above is first pure, then peaceable, gentle, open to reason, full of mercy and good fruits, impartial and sincere.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://icodemag.com/wp-content/uploads/2019/06/Screen-Shot-2019-06-08-at-9.22.15-PM-650x300.png"
+                        src="https://effectivechurch.com/wp-content/uploads/2018/08/wisdom.jpg"
                         alt="Third slide"
                     />
                     <Carousel.Caption>
-                        <h5>Third slide label</h5>
+                        <h3 className='fs-2'>seekWisdom?</h3>
                         <p>
-                            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                            Blessed is the one who finds wisdom, and the one who gets understanding.
                         </p>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -109,8 +110,39 @@ const Home = () => {
                 </div>
             </section>
 
-
-        </div>
+            <hr />
+            <br />
+            <section className="pt-36 bg-light-light overflow-hidden">
+                <div className="container">
+                    <div className="row g-16">
+                        <div className="col-12 col-md-6">
+                            <div className="mw-md-xl">
+                                <h2 className="fs-10 lh-sm mb-6">Get our mobile app to make the process faster.</h2>
+                                <p className="fs-17 text-muted mb-16">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Malesuada tellus vestibulum, commodo pulvinar id fames nunc. Turpis leo turpis non, id ut nunc.</p>
+                                <div className="row g-5">
+                                    <div className="col-auto">
+                                        <Link to="#">
+                                            <img src="https://icgmasjid.org/wp-content/uploads/2021/08/PlayStore.png" alt="" />
+                                        </Link>
+                                    </div>
+                                    <div className="col-auto">
+                                        <Link ti="#">
+                                            <img src="https://freeiconshop.com/wp-content/uploads/edd/app-store-badge-128x128.png" alt="" />
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="d-flex justify-content-center">
+                                <img class="img-fluid self-end" src="https://ps.w.org/appstore-reviews-viewer/assets/icon-256x256.png?rev=1164395" alt="" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+            </section >
+        </div >
     );
 };
 

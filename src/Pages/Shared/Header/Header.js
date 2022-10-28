@@ -6,7 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import ReactTooltip from 'react-tooltip';
-
+import { FaSearchengin } from "react-icons/fa";
 import { AuthContext } from '../../../Contexts/AuthProvider';
 
 
@@ -30,7 +30,7 @@ const Header = () => {
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                 <Container>
 
-                    <Navbar.Brand href="/">  <h2 className='fw-2'>seekWisdom</h2>  </Navbar.Brand>
+                    <Navbar.Brand href="/">  <h2 className='fw-2'>seekWisdom <FaSearchengin></FaSearchengin></h2>  </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
