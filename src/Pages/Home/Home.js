@@ -4,7 +4,7 @@ import Carousel from 'react-bootstrap/Carousel';
 
 const Home = () => {
     return (
-        <div className='mt-3'>
+        <div className='mt-2'>
             <Carousel variant="dark">
                 <Carousel.Item>
                     <img className="d-block w-100"
@@ -48,7 +48,7 @@ const Home = () => {
                 <div className="container pb-5">
                     <div className="mw-md-md mx-auto text-center mb-24">
                         <h2 className="fs-10 fw-semibold text-secondary mb-5">Our happy team</h2>
-                        <p className="text-muted">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
+                        <p className="text-muted fs-4">At Better Work, we are driven by shared standards of excellence, guided by the same integrity, and motivated by a common ambition to improve lives.</p>
                     </div>
                     <div className="container">
                         <div className="row g-16">
@@ -59,7 +59,7 @@ const Home = () => {
                                             <Image style={{ height: '100px' }} roundedCircle src="https://static.intercomassets.com/avatars/32419/square_128/Cory-Brown-Profile-1496848041.jpg" alt="" />
                                         </div>
                                         <div className="col">
-                                            <p className="fs-17 text-muted mb-6">Lorem ipsum dolor sit amet, consec tetur adipis cing elit. Eleifend id vulpu tate amet nunc. Elit sagittis sollici tudin cursus aliquam quis dui. Ut curabitur morbi nunc sit leo tellus neque dolor. Amet sem egestas.</p>
+                                            <p className="fs-17 text-muted mb-6">What's pleasing about this particular page is the simplicity: The grid design provides a modern feel, and clicking on a face opens a box with more information about the team member, including their bio, credentials, and social profiles.</p>
                                             <h3 className="fs-17 mb-0">Darrell Steward, CEO</h3>
                                         </div>
                                     </div>
@@ -72,7 +72,7 @@ const Home = () => {
                                             <Image style={{ height: '100px' }} roundedCircle src="https://www.contentednet.com/dam/corporate/assets/profiles/graciela.rissi.jpg" alt="" />
                                         </div>
                                         <div className="col">
-                                            <p className="fs-17 text-muted mb-6">Lorem ipsum dolor sit amet, consec tetur adipis cing elit. Eleifend id vulpu tate amet nunc. Elit sagittis sollici tudin cursus aliquam quis dui. Ut curabitur morbi nunc sit leo tellus neque dolor. Amet sem egestas.</p>
+                                            <p className="fs-17 text-muted mb-6">Below images are brief descriptions of each member. Notice how Philly Reps has made each description roughly the same length to maintain balance and alignment between grid elements. Most won’t notice this detail, but it results in a page with maximum readability.</p>
                                             <h3 className="fs-17 mb-0">Cody Fisher, CTO</h3>
                                         </div>
                                     </div>
@@ -82,7 +82,7 @@ const Home = () => {
                                 <div className="container">
                                     <div className="row g-7">
                                         <div className="col">
-                                            <p className="fs-17 text-muted mb-6">Lorem ipsum dolor sit amet, consec tetur adipis cing elit. Eleifend id vulpu tate amet nunc. Elit sagittis sollici tudin cursus aliquam quis dui. Ut curabitur morbi nunc sit leo tellus neque dolor. Amet sem egestas.</p>
+                                            <p className="fs-17 text-muted mb-6">Each employee at the London-based marketing agency has a trading card-style profile detailing their actual marketing accomplishments and personal facts, as well as their fictional superhero abilities. It's a quirky twist that gives visitors a colorful snapshot of the agency's team, highlighting both their impressive experience and friendly culture.</p>
                                             <h3 className="fs-17 mb-0">Guy Hawkins, CMO</h3>
                                         </div>
                                         <div className="col-auto">
@@ -95,7 +95,7 @@ const Home = () => {
                                 <div className="container">
                                     <div className="row g-7">
                                         <div className="col">
-                                            <p className="fs-17 text-muted mb-6">Lorem ipsum dolor sit amet, consec tetur adipis cing elit. Eleifend id vulpu tate amet nunc. Elit sagittis sollici tudin cursus aliquam quis dui. Ut curabitur morbi nunc sit leo tellus neque dolor. Amet sem egestas.</p>
+                                            <p className="fs-17 text-muted mb-6">overing over each team member's picture produces a darker alternative almost like an image negative, revealing the employee’s name along with an outfit change. This is a great example of a minimal, accessible "Meet the Team" page that manages to look cool and introduce the faces behind the agency without going over the top.</p>
                                             <h3 className="fs-17 mb-0">Annette White, COO</h3>
                                         </div>
                                         <div className="col-auto">

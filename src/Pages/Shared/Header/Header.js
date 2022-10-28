@@ -30,25 +30,26 @@ const Header = () => {
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                 <Container>
 
-                    <Navbar.Brand href="/">    seekWisdom</Navbar.Brand>
+                    <Navbar.Brand href="/">  <h2 className='fw-2'>seekWisdom</h2>  </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
 
 
                         </Nav>
+
                         <Nav>
-                            <Nav.Link><Link to='/home' style={{ textDecoration: 'none' }} >Home</Link></Nav.Link>
-                            <Nav.Link> <Link to='/courses' style={{ textDecoration: 'none' }} >Courses</Link></Nav.Link>
-                            <Nav.Link><Link to='/faq' style={{ textDecoration: 'none' }} >FAQ</Link></Nav.Link>
-                            <Nav.Link> <Link to='/blog' style={{ textDecoration: 'none' }} >Blog</Link></Nav.Link>
+                            <Nav.Link><Link to='/home' style={{ textDecoration: 'none' }} ><h5>Home</h5></Link></Nav.Link>
+                            <Nav.Link> <Link to='/courses' style={{ textDecoration: 'none' }} ><h5>Courses</h5></Link></Nav.Link>
+                            <Nav.Link><Link to='/faq' style={{ textDecoration: 'none' }} ><h5>FAQ</h5></Link></Nav.Link>
+                            <Nav.Link> <Link to='/blog' style={{ textDecoration: 'none' }} ><h5>Blog</h5></Link></Nav.Link>
 
 
                             <Nav.Link data-tip={user?.displayName} >
                                 {
                                     user?.uid ?
                                         <>
-                                            <Nav.Link onClick={handleLogOut}> <Link style={{ textDecoration: 'none' }} >Log Out</Link></Nav.Link>
+                                            <Nav.Link onClick={handleLogOut}> <Link style={{ textDecoration: 'none' }} ><h6>Log Out</h6></Link></Nav.Link>
 
                                         </>
                                         :
