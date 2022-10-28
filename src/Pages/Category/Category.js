@@ -13,7 +13,6 @@ const ref = React.createRef();
 const Category = () => {
 
     const courses = useLoaderData();
-    const checkout = useLoaderData();
 
     return (
         <div className='mx-5 my-5 p-5' ref={ref}>
