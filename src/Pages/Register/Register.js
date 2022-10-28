@@ -6,7 +6,7 @@ import { AuthContext } from '../../Contexts/AuthProvider';
 
 const Register = () => {
     const [error, setError] = useState('');
-    const { createUser } = useContext(AuthContext)
+    const { createUser } = useContext(AuthContext);
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -15,14 +15,15 @@ const Register = () => {
         const photoURL = form.photoURL.value;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(name, photoURL, email, password)
+        console.log(name, photoURL, email, password);
+        window.alert("You are successfully Logged In!")
 
         createUser(email, password)
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                form.reset();
                 setError('');
+                form.reset();
 
             })
             .catch(e => console.error(e));
@@ -54,11 +55,11 @@ const Register = () => {
                 <Form.Group className="mb-3 pt-4" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group>
-                <Button variant="success" type="submit">
+                <Button variant="success" type="submit" ><Link to="/home"></Link>
                     Register
                 </Button>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Text className="text-muted">
+                    <Form.Text className="text-warning">
                         {error}
                     </Form.Text>
                 </Form.Group>

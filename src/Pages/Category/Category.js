@@ -5,7 +5,6 @@ import Image from 'react-bootstrap/Image'
 
 import { Card, Nav } from 'react-bootstrap';
 
-// import ReactDOM from "react-dom";
 import Pdf from "react-to-pdf";
 
 
@@ -14,17 +13,17 @@ const ref = React.createRef();
 const Category = () => {
 
     const courses = useLoaderData();
+    const checkout = useLoaderData();
 
     return (
         <div className='mx-5 my-5 p-5' ref={ref}>
 
             {
                 <div>
-                    {courses.map(course => <div>
+                    {courses.map(course => <div> key={course.id}
                         <Card className="text-center" >
                             <Card.Header> <h2 className='text-danger'>Course Name:  {course.title}</h2></Card.Header>
                             <Card.Body>
-                                <Card.Title></Card.Title>
 
                                 <div>
                                     <Image
@@ -53,7 +52,7 @@ const Category = () => {
 
 
                         <div className='mt-1 d-flex justify-content-center '>
-                            <Nav.Link> <Link class="btn btn-success text-white my-2  " to='/checkout' style={{ textDecoration: 'none' }} >Get premium access</Link></Nav.Link>
+                            <Nav.Link> <Link class="btn btn-success text-white my-2 " to={`/checkout/${course.id}`} style={{ textDecoration: 'none' }} >Get premium access</Link></Nav.Link>
                         </div>
 
                     </div>)}

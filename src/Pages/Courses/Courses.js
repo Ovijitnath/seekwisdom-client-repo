@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import Image from 'react-bootstrap/Image'
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+<link rel="stylesheet" href="./Courses.css" />
 
 const Courses = () => {
     const [categories, setCategories] = useState([]);
@@ -20,7 +21,7 @@ const Courses = () => {
 
 
     return (
-        <div className='mx-auto'>
+        <div className='mx-auto pt-5'>
 
             <Container>
                 <Row>
@@ -29,8 +30,8 @@ const Courses = () => {
                         <div>
                             {
                                 categories.map(category => <div key={category.id} className='mt-1' >
-                                    <button type="button" class="btn btn-outline-warning">
-                                        <Link style={{ textDecoration: 'none' }} to={`/courses/${category.id}`} > {category.name} </Link>Language</button>
+
+                                    <button type="button" class="btn btn-danger custom"><Link class="text-white " style={{ textDecoration: 'none' }} to={`/course/${category.id}`}> {category.name}  Language </Link></button>
                                 </div>)
 
                             }

@@ -31,11 +31,15 @@ const Login = () => {
                 const user = result.user;
                 console.log(user);
                 form.reset();
-                setError('')
+                setError('');
                 navigate(from, { replace: true });
             })
-            .catch(e => console.error(e));
-        setError(error.message);
+            .catch(error => {
+
+                console.error(error)
+                setError(error.message);
+            })
+
 
     }
     const googleProvider = new GoogleAuthProvider();
@@ -74,7 +78,7 @@ const Login = () => {
                     Login
                 </Button>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Text className="text-muted">
+                    <Form.Text className="text-warning">
                         {error}
                     </Form.Text>
                 </Form.Group>

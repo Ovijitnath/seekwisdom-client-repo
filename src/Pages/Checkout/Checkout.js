@@ -1,13 +1,25 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
+
+
 const Checkout = () => {
+
+    const checkout = useLoaderData();
     return (
         <div>
+
             <Container>
                 <Row>
                     <Col lg="6">
 
+                        <div>
+                            {
+                                checkout.map(check => <> key={check.id}
+                                    <h1>{check.title} Selected!</h1>
+                                </>)
+                            }
+                        </div>
                         <div className='mt-5'>
                             <h1>Congratulations! <br /> You are a <span className='text-primary'>Premium member</span>  now !!</h1>
                             <h4 className='mt-5'> <span className='text-danger'>seekWisdom</span> Premium Membership is completed for you. </h4>
@@ -25,7 +37,7 @@ const Checkout = () => {
                 <div className='mt-1 d-flex justify-content-center '><button type="button" class="btn btn-success text-white ">
                     <Link class="text-white " style={{ textDecoration: 'none' }} to='/home'> Back to Home </Link ></button></div>
             </Container>
-        </div>
+        </div >
     );
 };
 
