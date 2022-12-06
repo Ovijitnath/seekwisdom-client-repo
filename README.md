@@ -1,3 +1,30 @@
+Live Website Link- https://seekwisdom-543d3.web.app/
+
+Website Name - seeWisdom
+
+Its it created with mainly:- 1.React JS. 2. Bootstrap. 3.React Icon 4.Firebase 5.Vercel etc.
+
+Main Features--
+
+There is a home page about the site and the team introduction.
+2.Courses page all about selecting a course you want to choose.
+
+3.More detail option is created to full details about the page.If you want to see pdf of that page, click on download pdf button.
+
+4.If you are a looged user, click get premium button and see what's in there.Logged user can also see the used image in the navbar.
+
+5.It is Authenticated with Firebase. User can log in with email,password, google sign in, github sign in basically.
+
+6.Faq page is avaible to answer the popular asked question.
+
+About page is about answering the asked question.
+
+A button of dark mode is provided.
+
+Responsive SPA site
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <<<<<<< HEAD
 # seekwisdom-client
 =======
