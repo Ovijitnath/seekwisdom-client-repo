@@ -53,7 +53,7 @@ export const routes = createBrowserRouter([
 
                 path: '/course/:id',
                 element: <Category></Category>,
-                loader: ({ params }) => fetch(`http://localhost:5000/course/${params.id}`)
+                loader: ({ params }) => fetch(`https://seekwisdom-server.vercel.app/course/${params.id}`)
 
 
             },
@@ -61,7 +61,7 @@ export const routes = createBrowserRouter([
 
                 path: '/checkout/:id',
                 element: <PrivateRoute> <Checkout></Checkout> </PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/checkout/${params.id}`)
+                loader: ({ params }) => fetch(`https://seekwisdom-server.vercel.app/checkout/${params.id}`)
 
             }
 

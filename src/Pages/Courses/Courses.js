@@ -14,7 +14,7 @@ const Courses = () => {
 
     useEffect(() => {
 
-        fetch('http://localhost:5000/catagories')
+        fetch('https://seekwisdom-server.vercel.app/catagories')
             .then(res => res.json())
             .then(data => setCategories(data))
     })
