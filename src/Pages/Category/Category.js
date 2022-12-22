@@ -15,11 +15,11 @@ const Category = () => {
     const courses = useLoaderData();
 
     return (
-        <div className='mx-5 my-5 p-5' ref={ref}>
+        <div className='mx-5 my-5' ref={ref}>
 
             {
                 <div>
-                    {courses.map(course => <div> key={course.id}
+                    {courses.map(course => <div>
                         <Card className="text-center" >
                             <Card.Header> <h2 className='text-danger'>Course Name:  {course.title}</h2></Card.Header>
                             <Card.Body>
@@ -42,7 +42,6 @@ const Category = () => {
                                     <Pdf targetRef={ref} filename="code-example.pdf">
                                         {({ toPdf }) => <button variant="primary" onClick={toPdf}>Download Pdf</button>}
                                     </Pdf>
-
                                 </div>
 
                             </Card.Footer>
